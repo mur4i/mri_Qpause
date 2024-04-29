@@ -30,7 +30,7 @@ if ESX then
     end)
 end
 
-local Reason = 'Sei uscito dal gioco'
+local Reason = 'Saiu do servidor'
 
 RegisterNetEvent('LGF:QuitPlayer')
 AddEventHandler('LGF:QuitPlayer', function()
