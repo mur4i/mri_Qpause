@@ -13,7 +13,7 @@ function updateText(localeData) {
     document.querySelector('#show-text').innerText = locale.mainpage.show;
 
     document.querySelector('#map-h2').innerText = locale.mainpage.map.title;
-    document.querySelector('#map-h2').innerText = locale.mainpage.map.description;
+    document.querySelector('#map-p').innerText = locale.mainpage.map.description;
     
     document.querySelector('#settings-h2').innerText = locale.mainpage.settings.title;
     document.querySelector('#settings-p').innerText = locale.mainpage.settings.description;
@@ -63,6 +63,11 @@ $(document).ready(function() {
         $.post(`https://${GetParentResourceName()}/actionPauseMenu`, JSON.stringify('settings'));
         closePauseMenu(); 
     });
+
+    // $('#player-identifier').click(function() {
+    //     debugPrint("Identifier clicked");
+    //     $.post(`https://${GetParentResourceName()}/actionPauseMenu`, JSON.stringify('identifier'));
+    // });
 
     $('#reloadButton').click(function() {
         var inputElement = document.createElement('input');
@@ -148,8 +153,8 @@ $(document).ready(function() {
     function updateUI(playerData) {
         document.querySelector('.data-grid div:nth-child(1) p:nth-child(1)').innerText = locale.mainpage.playerdata.name + ': ' + playerData.name;
         document.querySelector('.data-grid div:nth-child(1) p:nth-child(2)').innerText = locale.mainpage.playerdata.job + ': ' + playerData.job;
-        document.querySelector('.data-grid div:nth-child(2) p:nth-child(1)').innerText = locale.mainpage.playerdata.cash + ': ' + locale.mainpage.playerdata.currency + playerData.cash;
-        document.querySelector('.data-grid div:nth-child(2) p:nth-child(2)').innerText = locale.mainpage.playerdata.group + ': ' + playerData.group;
+        document.querySelector('.data-grid div:nth-child(2) p:nth-child(1)').innerText = locale.mainpage.playerdata.cash + ': ' + locale.mainpage.playerdata.currency + ' ' + playerData.cash;
+        // document.querySelector('.data-grid div:nth-child(2) p:nth-child(2)').innerText = locale.mainpage.playerdata.group + ': ' + playerData.group;
         updatePlayerID(playerData.playerID);
         updatePlayerName(playerData.playerName);
         updatePlayerIdentifier(playerData.identifier);
@@ -257,6 +262,7 @@ $(document).ready(function() {
         
         $('#player-identifier').click(function() {
             if ($(this).css('filter') === 'blur(1.8px)') {
+                $.post(`https://${GetParentResourceName()}/actionPauseMenu`, JSON.stringify('identifier'));
                 $(this).css('filter', 'none');
             } else {
                 $(this).css('filter', 'blur(1.8px)');

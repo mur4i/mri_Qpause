@@ -1,4 +1,58 @@
 {
+    "PT": {
+        "notification": {
+            "copy_success": "Texto Copiado com Sucesso"
+        },
+        "confirm": {
+            "exit_confirmation": "Tem certeza de que deseja sair?",
+            "relog_confirmation": "Tem certeza de que deseja fazer login novamente?",
+            "yes": "Sim",
+            "no": "Não"
+        },
+        "mainpage": {
+            "map": {
+                "title": "Mapa",
+                "description": "Abrir o mapa atual"
+            },
+            "settings": {
+                "title": "Configurações",
+                "description": "Preferências de jogo"
+            },
+            "exit": {
+                "title": "Sair",
+                "description": "Sair da sessão atual"
+            },
+            "relog": {
+                "title": "Fazer Login Novamente",
+                "description": "Reiniciar a sessão"
+            },
+            "rules": {
+                "title": "Regras",
+                "rules": [
+                    "Seja respeitoso e considerado com os demais usuários.",
+                    "Evite spam ou inundar o chat com mensagens desnecessárias.",
+                    "Siga as diretrizes e políticas da comunidade para garantir um ambiente positivo para todos.",
+                    "Respeite a diversidade de opiniões e perspectivas dentro da comunidade.",
+                    "Ajude os novatos e forneça assistência quando necessário.",
+                    "Use linguagem apropriada e evite comportamento ofensivo ou inadequado.",
+                    "Mantenha as discussões focadas no tema e relevantes para a conversa atual.",
+                    "Denuncie qualquer violação das regras aos moderadores ou administradores.",
+                    "Participe ativamente e contribua positivamente para a comunidade.",
+                    "Divirta-se e aproveite o tempo interagindo com os outros!"
+                ]
+            },
+            "playerdata": {
+                "title": "Dados do Jogador Atual",
+                "name": "Nome",
+                "job": "Trabalho",
+                "cash": "Carteira",
+                "group": "Grupo",
+                "currency": "R$"
+            },
+            "resume": "Pressione ESC para retomar",
+            "show": "Mostrar"
+        }
+    },
     "EN": {
         "notification": {
             "copy_success": "Copied Text Successfully"

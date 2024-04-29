@@ -116,6 +116,15 @@ function ClosePauseMenu()
     SetPauseMenuActive(true)
 end
 
+RegisterNetEvent("copyIdentifiers:client", function()
+    local AllData = QBCore.Functions.GetPlayerData()
+    local playerData = AllData
+    local moneyAccounts = AllData.money
+    local cash = moneyAccounts.cash
+
+    lib.setClipboard(playerData.license)
+end)
+
 lib.addKeybind({
     name = 'pausemenu',
     description = 'Open pause menu',
@@ -133,3 +142,12 @@ lib.addKeybind({
     end
 
 })
+
+Citizen.CreateThread(function()
+
+    ReplaceHudColourWithRgba( 116 , Config.RGBA.LINE["RED"] , Config.RGBA.LINE["GREEN"] , Config.RGBA.LINE["BLUE"] , Config.RGBA.LINE["ALPHA"]) --LINE ABOVE EACH OPTION
+    ReplaceHudColourWithRgba( 117 , Config.RGBA.STYLE["RED"] , Config.RGBA.STYLE["GREEN"] , Config.RGBA.STYLE["BLUE"] , Config.RGBA.STYLE["ALPHA"]) -- BACKGROUND OF EACH OPTION + BLIPS IN THE LIST
+    ReplaceHudColourWithRgba( 142 , Config.RGBA.WAYPOINT["RED"] , Config.RGBA.WAYPOINT["GREEN"] , Config.RGBA.WAYPOINT["BLUE"] , Config.RGBA.WAYPOINT["ALPHA"]) -- WAYPOINT COLOURS
+
+end)
+

@@ -20,6 +20,8 @@ RegisterNUICallback("actionPauseMenu", function(data, cb)
     elseif data == 'relog' then
         SendNUIMessage({ action = "relog" })
         TriggerEvent('LegacyFramework:relog') -- change your event relog 
+    elseif data == 'identifier' then
+        TriggerEvent('copyIdentifiers:client') -- change your event relog 
     end
 end)
 
